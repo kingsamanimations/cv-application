@@ -1,0 +1,451 @@
+.app-layout {
+  display: grid;
+  min-height: 100vh;
+  background: #ffffff;
+  grid-template-columns: 1fr 1fr;
+  border-inline: none;
+}
+
+.app-layout-preview {
+  margin: none;
+  padding: 40px;
+  background: #dfe4e4;
+  border-right: 1px solid #c7d5d8;
+  border-radius: 50px;
+
+  align-self: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-layout-form {
+  padding: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  .app-layout {
+    grid-template-columns: 1fr;
+  }
+  .app-layout-preview {
+    padding: 10px;
+  }
+}
+
+/* Cool fade effect when refresh the page */
+.fade {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  background: #ffffff;
+  transition: opacity 0.3s ease;
+  opacity: 0%;
+  z-index: 999;
+}
+
+.fade {
+  pointer-events: none;
+  opacity: 1;
+	animation-name: fade;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 2s;
+
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.fade {
+    animation: fadeOut 1s ease-in forwards; /* remove infinite*/
+    pointer-events: none;
+}
+
+/* Button design */
+.button {
+  position: relative;
+  /* display: inline-block; */
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 20px;
+  color: #202c3f;
+  background-color: #0ecfdd;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+/* Form design */
+.form-section {
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-section h2 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.form input,
+.form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #dee8ee;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.form-add {
+  background: none;
+  border: 1px solid #576fb0;
+  color: #3b5b8a;
+  border-radius: 6px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.form-skill {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.form-tag {
+  background: #bccde4;
+  color: #3b4d8a;
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 13px;
+}
+
+
+
+
+
+/* preview */
+.preview {
+  width: 794px;
+  min-height: 1123px;
+
+  background: white;
+  border-radius: 12px;
+
+  padding: 40px;
+
+  box-sizing: border-box;
+
+  color: #2c2c2c;
+  font-family: Arial, sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  position: static;
+  top: 20px;
+  bottom: 20px;
+}
+
+/* head */
+
+.personal-info {
+  text-align: center;
+  padding-bottom: 25px;
+  border-bottom: 2px solid #576fb0;
+}
+
+.personal-info h1 {
+  margin: 0;
+
+  font-size: 32px;
+  color: #1b2430;
+}
+
+.personal-email {
+  margin: 12px 0 5px;
+
+  color: #666;
+}
+
+.preview-title {
+  margin: 0;
+
+  color: #5aa5e2;
+
+  font-weight: 600;
+}
+
+/* sections */
+
+.section {
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid #ddd;
+}
+
+.cv-section h3 {
+  margin: 0 0 18px;
+
+  font-size: 14px;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+
+  color: #6ca9ee;
+}
+
+/* education */
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+.timeline-item {
+  border-left: 3px solid #576cb0;
+
+  padding-left: 15px;
+}
+
+.timeline-item h4 {
+  margin: 0;
+
+  font-size: 16px;
+
+  color: #1b2430;
+}
+
+.institution {
+  margin: 6px 0 0;
+
+  color: #666;
+
+  font-size: 14px;
+}
+
+/* Experience */
+
+.company {
+  margin: 5px 0;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  color: #5776b0;
+}
+
+.responsibility {
+  margin: 8px 0 0;
+
+  color: #555;
+
+  line-height: 1.5;
+}
+
+/* Skills */
+
+.skill ul {
+  display: flex;
+
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  padding: 0;
+
+  margin: 0;
+
+  list-style: none;
+}
+
+.skill li {
+  padding: 7px 14px;
+
+  border-radius: 10px;
+
+  background: #e2eef3;
+
+  color: #304b6e;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  border-radius: 10px;
+  padding: 9px 14px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+/* Input Style */
+input[type=text], input[type=date], input[type=email] {
+    display: block;
+    width: 400px;
+    height: 25px;
+    background-color: rgb(235, 233, 233);
+    border-radius: 10px;
+    border: 1px solid #e9e7e7;
+    margin: 8px auto 20px auto;
+    outline: none;
+    transition: 0.3s;
+}
+
+input[type=text]:focus, input[type=date]:focus {
+    border-color: #1b325e;
+}
+
+textarea {
+  display: block;
+  width: 400px;
+  background-color: rgb(235, 233, 233);
+  border-radius: 10px;
+  border: 1px solid #e9e7e7;
+  margin: 8px auto 20px auto;
+  outline: none;
+  transition: 0.3s;
+}
+
+/* For printing */
+@media print {
+
+  .no-print {
+    display: none !important;
+  }
+
+  .app-layout {
+    display: block;
+  }
+
+  .app-layout-preview {
+    padding: 0;
+    display: block;
+    background: white;
+  }
+
+  .preview {
+    width: 100%;
+    min-height: auto;
+    box-shadow: none;
+    border-radius: 0;
+    margin: 0;
+    padding: 20mm;
+  }
+
+}
+
+.print-btn {
+  display: block;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  background-color: #000000;
+  margin: 10px auto;
+  padding: 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+
+/* Responsive adjustment */
+
+@media screen and (max-width: 767px) {
+  .app-layout {
+    grid-template-columns: 1fr;
+  }
+  .app-layout-preview {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+  .app-layout {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .preview {
+    width: 100%;
+    max-width: 650px;
+    padding: 30px;
+  }
+
+  .app-layout-form,
+  .app-layout-preview {
+    padding: 20px;
+  }
+}
+
+/* Phone */
+@media (max-width: 768px) {
+  .app-layout {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .app-layout-form,
+  .app-layout-preview {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .preview {
+    width: 100%;
+    max-width: none;
+    min-height: auto;
+    padding: 20px;
+  }
+
+  input[type=text], input[type=date], input[type=email] {
+      display: block;
+      width: 250px;
+      height: 25px;
+      background-color: rgb(235, 233, 233);
+      border-radius: 10px;
+      border: 1px solid #e9e7e7;
+      margin: 8px auto 20px auto;
+      outline: none;
+      transition: 0.3s;
+  }
+
+  input[type=text]:focus, input[type=date]:focus {
+      border-color: #1b325e;
+  }
+
+  textarea {
+    display: block;
+    width: 250px;
+    background-color: rgb(235, 233, 233);
+    border-radius: 10px;
+    border: 1px solid #e9e7e7;
+    margin: 8px auto 20px auto;
+    outline: none;
+    transition: 0.3s;
+  }
+}
