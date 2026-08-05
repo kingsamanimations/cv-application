@@ -1,9 +1,9 @@
-This is a CV Application Webpage made in React,
-except, I had lots of difficulties with pushing it to github. The webpage doesn't display as intended. I will try to fix this soon. But until then, you can have a look at the source code
+This is a CV Application Webpage made in React.
+I had lots of difficulties with pushing it to github. The webpage didn't display as intended. I managed to fix this issue.
 
 I had help from CV Applications websites and projects for this
 
-# You can test it out here (As soon as I fix it):
+# You can test it out here:
  https://kingsamanimations.github.io/cv-application/
 
 
